@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "GameOfThrones" class = "com.netcracker.injection.Book" scope = "prototype">
+        <constructor-arg ref = "fantasy"/>
+        <constructor-arg value = "Game of Thrones"/>
+    </bean>
+
+    <bean id = "Shining" class = "com.netcracker.injection.Book" scope="prototype">
+        <constructor-arg ref = "horror"/>
+        <constructor-arg value="The Shining"/>
+    </bean>
+
+    <bean id = "Sapiens" class = "com.netcracker.injection.Book" scope="prototype">
+        <constructor-arg ref = "non-fiction"/>
+        <constructor-arg value="Sapiens"/>
+    </bean>
+
+    <bean id = "fantasy" class="com.netcracker.genres.Fantasy" scope = "prototype"/>
+    <bean id = "horror" class="com.netcracker.genres.Horror" scope="prototype"/>
+    <bean id = "non-fiction" class="com.netcracker.genres.NonFiction" scope="prototype"/>
+
+    <bean id = "libraryList" class = "com.netcracker.collections.LibraryList" scope="prototype">
+        <constructor-arg>
+            <list>
+                <ref bean="GameOfThrones"/>
+                <ref bean="Sapiens"/>
+                <ref bean="Shining"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id = "libraryMap" class="com.netcracker.collections.LibraryMap" scope="prototype">
+        <constructor-arg>
+            <map>
+                <entry key="1" value-ref="Sapiens"/>
+                <entry key="2" value-ref="GameOfThrones"/>
+                <entry key="3" value-ref="Shining"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id = "librarySet" class="com.netcracker.collections.LibrarySet" scope="prototype">
+        <constructor-arg>
+            <set>
+                <ref bean="Shining"/>
+                <ref bean="Sapiens"/>
+                <ref bean="GameOfThrones"/>
+            </set>
+        </constructor-arg>
+    </bean>
+</beans>

@@ -1,0 +1,2 @@
+serviceClass: com.netcracker.client.AddBookService
+path: F92DE3D2C7C3BC929C3ED445C2879F83.gwt.rpc

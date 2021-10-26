@@ -1,0 +1,6 @@
+# Module MyApplication
+# RPC service class, partial path of RPC policy file
+com.netcracker.client.ReadFileService, CE60BC8E3E862F9ED4132AC7C270A195.gwt.rpc
+com.netcracker.client.DeleteBookService, 903BC5C9F1E9F580249FFE5FA3C1E993.gwt.rpc
+com.netcracker.client.AddBookService, F92DE3D2C7C3BC929C3ED445C2879F83.gwt.rpc
+com.netcracker.client.SortService, 3952E55472223D04724E540C6F71BE2F.gwt.rpc

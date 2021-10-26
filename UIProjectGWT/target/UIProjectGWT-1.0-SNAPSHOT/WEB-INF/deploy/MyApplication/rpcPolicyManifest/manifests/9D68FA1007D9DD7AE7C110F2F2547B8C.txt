@@ -1,0 +1,2 @@
+serviceClass: com.netcracker.client.SortService
+path: 3952E55472223D04724E540C6F71BE2F.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: com.netcracker.client.ReadFileService
+path: CE60BC8E3E862F9ED4132AC7C270A195.gwt.rpc

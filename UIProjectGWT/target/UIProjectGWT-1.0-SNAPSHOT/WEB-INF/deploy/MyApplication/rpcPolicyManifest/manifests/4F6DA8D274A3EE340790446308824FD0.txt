@@ -1,0 +1,2 @@
+serviceClass: com.netcracker.client.DeleteBookService
+path: 903BC5C9F1E9F580249FFE5FA3C1E993.gwt.rpc

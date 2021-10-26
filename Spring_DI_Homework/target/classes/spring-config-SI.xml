@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "HarryPotter" class = "com.netcracker.injection.Book" scope="prototype">
+        <property name = "genre" ref = "fantasy"/>
+        <property name="title" value="Harry Potter"/>
+    </bean>
+
+    <!-- "It" is a book of Stephen King, not IT...but i guess IT is a horror for anybody too(not me)-->
+    <bean id = "It" class="com.netcracker.injection.Book" scope="prototype">
+        <property name= "genre" ref = "horror"/>
+        <property name="title" value = "IT"/>
+    </bean>
+
+    <bean id = "TheSelfishGene" class="com.netcracker.injection.Book" scope="prototype">
+        <property name="genre" ref = "non-fiction"/>
+        <property name="title" value="The Selfish Gene"/>
+    </bean>
+
+    <bean id = "fantasy" class="com.netcracker.genres.Fantasy" scope = "prototype"/>
+    <bean id = "horror" class="com.netcracker.genres.Horror" scope="prototype"/>
+    <bean id = "non-fiction" class="com.netcracker.genres.NonFiction" scope="prototype"/>
+
+    <bean id = "libraryList" class="com.netcracker.collections.LibraryList">
+        <property name="library">
+            <list>
+                <ref bean="HarryPotter"/>
+                <ref bean="It"/>
+                <ref bean="TheSelfishGene"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id = "librarySet" class="com.netcracker.collections.LibrarySet">
+        <property name="librarySet">
+            <set>
+                <ref bean="TheSelfishGene"/>
+                <ref bean="HarryPotter"/>
+                <ref bean="It"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id = "libraryMap" class="com.netcracker.collections.LibraryMap">
+        <property name="libraryMap">
+            <map>
+                <entry key="1" value-ref="It"/>
+                <entry key="2" value-ref="HarryPotter"/>
+                <entry key="3" value-ref="TheSelfishGene"/>
+            </map>
+        </property>
+    </bean>
+</beans>

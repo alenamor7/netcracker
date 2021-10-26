@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic equatation</title>
+    <link rel="stylesheet" type="text/css" href="page.css">
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "script.js" type="text/javascript"></script>
+</head>
+<body>
+<h3> Please enter coeffs of quadratic equatation</h3>
+
+<form action="CalculatingCoeffs" method="post" id = "form">
+    <table id = "coeffs">
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </tr>
+        <tr>
+            <td><input type = "text" id = "a" name = "a"/></td>
+            <td><input type = "text" id = "b" name = "b"/></td>
+            <td><input type = "text" id = "c" name = "c"/></td>
+            <td><input type = "submit" id = "submit" value= "Submit"/></td>
+        </tr>
+    </table>
+
+</form>
+<br>
+
+<h3>Results table (*press result row if you want to delete it)</h3>
+<table id = "resultTable">
+    <thead>
+    <tr id = "notDelete">
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+        <th>Result</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</body>
+</html>
